@@ -1,6 +1,6 @@
 {
   "name": "RN-AtomCSS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple, expressive API for ALL CSS + React Native",
   "license": "MIT",
   "module": "dist/index.js",
