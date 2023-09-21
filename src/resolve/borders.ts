@@ -67,12 +67,41 @@ export function border(
   try {
     let [rest, direction] = parseAndConsumeDirection(value);
     const widthUtilityMatch = rest.match(/^(-?(\d)+)?$/);
-    if (widthUtilityMatch) {
-      return borderWidth(rest, direction, style);
+    if (
+      widthUtilityMatch &&
+      ['All', 'Left', 'Right', 'Top', 'Bottom', 'End', 'Start'].includes(
+        direction,
+      )
+    ) {
+      let dir: 'All' | 'Left' | 'Right' | 'Top' | 'Bottom' | 'End' | 'Start';
+      switch (direction) {
+        case `All`:
+          dir = `All`;
+          break;
+        case `Left`:
+          dir = `Left`;
+          break;
+        case `Right`:
+          dir = `Right`;
+          break;
+        case `Top`:
+          dir = `Top`;
+          break;
+        case `Bottom`:
+          dir = `Bottom`;
+          break;
+        case `End`:
+          dir = `End`;
+          break;
+        case `Start`:
+          dir = `Start`;
+          break;
+      }
+      return borderWidth(rest, dir, style);
     }
-    rest = rest.replace(/^-/, ``); // 样式
-    if ([`dashed`, `solid`, `dotted`, `none`, `double`].includes(rest)) {
-      return (style['borderStyle'] = rest);
+    let str = rest.replace(/^-/, ``); // 样式
+    if ([`dashed`, `solid`, `dotted`, `none`, `double`].includes(str)) {
+      style.borderStyle = str;
     }
     let colorType:
       | 'border'
