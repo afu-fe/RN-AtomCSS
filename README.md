@@ -22,7 +22,12 @@ rn-atomcss 主要具备以下特性：
 2.  在RN项目中导入
     ```js
     import { autoTailwind } from 'rn-atomcss';
-    global.tailwind = autoTailwind();
+    import { Platform } from 'react-native';
+    global.tailwind = autoTailwind({
+      defaultStyles: {},
+      extend: {},
+      Platform,
+    });
     ```
 
 ## 使用
@@ -84,6 +89,7 @@ rn-atomcss 主要具备以下特性：
 
 ```js
 import { autoTailwind } from 'rn-atomcss';
+import { Platform } from 'react-native';
 const ts = autoTailwind({
   defaultStyles: {},
   extend: {
@@ -109,6 +115,7 @@ const ts = autoTailwind({
       'colorlingra-01': ['#4C88FF', '#206CFE'], // 命名规则仅支持colorlingra开头的
     },
   },
+  Platform,
 });
 
 // 使用
