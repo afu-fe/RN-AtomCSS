@@ -155,10 +155,9 @@ export function borderRadius(
         }
         // 拓展数据 end
         // 原始数据 判断是否为数字
-        rest = parseFloat(rest);
-        if (Number.isFinite(rest)) {
-          v = 2 * rest;
-          return (style[`${key}`] = v);
+        const n = parseFloat(rest);
+        if (Number.isFinite(n)) {
+          return (style[`${key}`] = 2 * n);
         }
       }
     });
