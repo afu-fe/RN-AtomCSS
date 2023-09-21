@@ -1,10 +1,4 @@
-type StyleValue =
-  | string[]
-  | string
-  | number
-  | boolean
-  | Style
-  | Record<string, any>;
+type StyleValue = string[] | string | number | boolean | Record<string, any>;
 
 export default class Cache {
   private styles: Map<string, Record<string, StyleValue>> = new Map();
