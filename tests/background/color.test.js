@@ -3,7 +3,7 @@ import { expect, test } from 'vitest';
 import { autoTailwind } from '../../src/index';
 
 import { colorbase } from '../../src/config/index';
-import { addOpacity } from '../../src/utils/index';
+import { addOpacity } from '../utils';
 
 const ts = autoTailwind({
   // http://auto-rn-tail.terra.corpautohome.com/
