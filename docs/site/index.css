@@ -1,0 +1,139 @@
+.color-box .box-item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.color-box .box-item .box-left {
+  width: 8rem;
+}
+
+.color-box .box-item .box-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.color-box .box-item .box-right .colorbox {
+  width: 106px;
+  height: 62px;
+  margin-right: 10px;
+}
+
+.color-box .box-item-gradient {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.color-box .box-item-gradient .box-left {
+  width: 12rem;
+}
+
+.color-box .box-item-gradient .box-right {
+  width: 206px;
+  height: 62px;
+}
+
+.box-color {
+  width: 106px;
+  height: 40px;
+  border-radius: 0.25rem;
+}
+
+.box-text {
+  --tw-text-opacity: 1;
+
+  color: rgba(17, 24, 39, var(--tw-text-opacity));
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.title {
+  color: rgba(17, 24, 39);
+  display: flex;
+  flex-direction: row;
+}
+
+.title .title-span {
+  font-size: 12px;
+  margin-right: 10px;
+
+  --tw-text-opacity: 1;
+
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  margin-top: 3px;
+}
+
+.text-xs {
+  --tw-text-opacity: 1;
+
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.table-box li {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+}
+
+.table-box li .header {
+  flex: 1;
+
+  --tw-text-opacity: 1;
+
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.table-box li .name {
+  flex: 1;
+
+  --tw-text-opacity: 1;
+
+  color: rgba(124, 58, 237, var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.table-box li .value {
+  flex: 1;
+
+  --tw-text-opacity: 1;
+
+  color: rgba(2, 132, 199, var(--tw-text-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.table-box li .novalue {
+  flex: 1;
+
+  --tw-text-opacity: 1;
+
+  color: red;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.table-box li .value span {
+  display: flex;
+}
+
+.table-box-scroll {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
