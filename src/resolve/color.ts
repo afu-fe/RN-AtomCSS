@@ -117,7 +117,10 @@ export function color(
       );
       const key = cArr[0];
       const v = colorConfig[key];
-      const n = Math.floor(parseInt(value.replace(key, '')) || 100);
+      let n = Math.floor(parseInt(value.replace(key, '')) || 100);
+      if (parseInt(value.replace(key, '')) === 0) {
+        n = 0;
+      }
       const opacity = Math.abs(n);
       if (!Number.isNaN(opacity) && v) {
         const cv = addOpacity(v, opacity / 100);

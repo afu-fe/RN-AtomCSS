@@ -1,9 +1,9 @@
 import React from 'react';
-import { colorbase, colorgradient } from '../../../src/config/index';
+import { colorDefault, colorgradient } from '../../../src/config/index';
 import { addOpacity } from '../../../src/utils/index';
 import '../index.css';
 const Index = () => {
-  const colorArr = Object.keys(colorbase);
+  const colorArr = Object.keys(colorDefault);
   const colorgradientArr = Object.keys(colorgradient);
   return (
     <div className="table-box" style={{ width: '100%', position: 'relative' }}>
@@ -19,10 +19,10 @@ const Index = () => {
         <>
           <li>
             <span className="name">{item}</span>
-            <span className="value">{colorbase[item]}</span>
+            <span className="value">{colorDefault[item]}</span>
             <span
               style={{
-                backgroundImage: `linear-gradient(to right,${colorbase[item]}, ${colorbase[item]})`,
+                backgroundImage: `linear-gradient(to right,${colorDefault[item]}, ${colorDefault[item]})`,
                 width: '100px',
                 height: '30px',
               }}
@@ -60,11 +60,11 @@ const Index = () => {
         <li key={index}>
           <span className="name">{item}-`Number`</span>
           <span className="value">
-            borderColor: {addOpacity(colorbase[item], 'Number')}
+            borderColor: {addOpacity(colorDefault[item], 'Number')}
           </span>
           <span
             style={{
-              background: addOpacity(colorbase[item], 100),
+              background: addOpacity(colorDefault[item], 100),
               width: '100px',
               height: '30px',
             }}

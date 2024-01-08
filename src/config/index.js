@@ -42,8 +42,44 @@ const fontfamily = {
   din: fontFamilyUtil['din'],
   semibold: fontFamilyUtil['semibold'],
 };
+const colorDefault = {
+  blue_1: '#0088FF',
+  blue_2: '#33A0FF',
+  blue_3: '#99CFFF',
+  blue_4: '#E5F3FF',
+  Orange_1: '#FF6600',
+  Orange_2: '#FF8533',
+  Orange_3: '#FFC299',
+  Orange_4: '#FFEFE5',
+  cyan_1: '#25C9FF',
+  cyan_2: '#51D4FF',
+  cyan_3: '#A8E9FF',
+  cyan_4: '#E9F9FF',
+  green_1: '#1CCD99',
+  green_2: '#49D7AD',
+  green_3: '#A4EBD6',
+  green_4: '#E8FAF4',
+  red_1: '#FF4434',
+  red_2: '#FF695D',
+  red_3: '#FFB4AE',
+  red_4: '#FFECEA',
+  gray_1: '#111E36',
+  gray_2: '#464E64',
+  gray_3: '#828CA0',
+  gray_4: '#BFC5D2',
+  gray_5: '#E6E9F0',
+  gray_6: '#E6EBF5',
+  gray_7: '#F8F9FC',
+  white: '#FFFFFF',
+  black: '#000000',
+};
+const colorExtend = {
+  Extend_1: '#FFE7CC',
+  Extend_2: '#493422',
+  Extend_3: '#2B2B2B',
+};
 const colorbase = {
-  black: 'rgb(0,0,0)', // #000000
+  black: '#000000', // #000000
   blue: 'rgb(32,108,254)', // #206CFE
   orange: 'rgb(255,102,0)', // #FF6600
   red: 'rgb(252,10,10)', // #FC0A0A
@@ -65,6 +101,8 @@ const colorbase = {
   'color-dark-orange': '#FF4434',
   'color-transparent': 'transparent',
   'color-line': '#F1F2F6',
+  ...colorDefault,
+  ...colorExtend,
 };
 const colorgradient = {
   'colorlingra-blue': ['#4C88FF', '#206CFE'],
@@ -153,6 +191,8 @@ const direction = {
   rtl: 'rtl',
 };
 export {
+  colorDefault,
+  colorExtend,
   colorbase,
   colorgradient,
   direction,
